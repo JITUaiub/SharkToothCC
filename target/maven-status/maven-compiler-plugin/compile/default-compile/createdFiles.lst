@@ -16,5 +16,6 @@ org\sharktooth\gms\model\User.class
 org\sharktooth\gms\service\UserService.class
 org\sharktooth\gms\dao\implementation\UsersQueryDAOImplementation.class
 org\sharktooth\gms\service\implementation\GuildInfoServiceImplementation.class
+org\sharktooth\gms\helper\WebAppInitializer.class
 org\sharktooth\gms\model\UserLogin.class
 org\sharktooth\gms\service\implementation\UserServiceImplementation.class
