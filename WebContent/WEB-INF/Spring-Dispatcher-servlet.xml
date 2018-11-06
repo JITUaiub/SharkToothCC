@@ -9,9 +9,9 @@
 		http://www.springframework.org/schema/context/spring-context-4.2.xsd">
 	<mvc:annotation-driven />
 
-	<context:component-scan base-package="org.sharktooth.gms.controller"></context:component-scan>
-	<context:component-scan base-package="org.sharktooth.gms.dao.implementation"></context:component-scan>
-	<context:component-scan base-package="org.sharktooth.gms.service.implementation"></context:component-scan>
+	<context:component-scan base-package="main.java.org.sharktooth.gms.controller"></context:component-scan>
+	<context:component-scan base-package="main.java.org.sharktooth.gms.dao.implementation"></context:component-scan>
+	<context:component-scan base-package="main.java.org.sharktooth.gms.service.implementation"></context:component-scan>
 
 	<bean name="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -37,9 +37,9 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="annotatedClasses">
 			<array>
-				<value>org.sharktooth.gms.model.User</value>
-				<value>org.sharktooth.gms.model.UserLogin</value>
-				<value>org.sharktooth.gms.model.UsersQuery</value>
+				<value>main.java.org.sharktooth.gms.model.User</value>
+				<value>main.java.org.sharktooth.gms.model.UserLogin</value>
+				<value>main.java.org.sharktooth.gms.model.UsersQuery</value>
 			</array>
 		</property>
 		<property name="hibernateProperties">
