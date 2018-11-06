@@ -1,13 +1,12 @@
-package main.java.org.sharktooth.gms.service.implementation;
+package org.sharktooth.gms.service.implementation;
 
 import java.util.List;
 
+import org.sharktooth.gms.dao.UserDAO;
+import org.sharktooth.gms.model.User;
+import org.sharktooth.gms.service.GuildInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import main.java.org.sharktooth.gms.dao.UserDAO;
-import main.java.org.sharktooth.gms.model.User;
-import main.java.org.sharktooth.gms.service.GuildInfoService;
 
 @Service
 public class GuildInfoServiceImplementation implements GuildInfoService{

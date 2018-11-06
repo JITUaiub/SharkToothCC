@@ -1,8 +1,8 @@
-package main.java.org.sharktooth.gms.helper;
+package org.sharktooth.gms.helper;
 
 import javax.servlet.http.HttpServletRequest;
 
-import main.java.org.sharktooth.gms.model.User;
+import org.sharktooth.gms.model.User;
 
 public class UserAccessControl {
 	public static void setSessionAttribute(HttpServletRequest request, String sessionName, User sessionValue) {

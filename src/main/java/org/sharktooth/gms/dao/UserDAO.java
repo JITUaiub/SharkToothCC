@@ -1,10 +1,9 @@
-package main.java.org.sharktooth.gms.dao;
+package org.sharktooth.gms.dao;
 
 import java.util.List;
 
+import org.sharktooth.gms.model.User;
 import org.springframework.stereotype.Repository;
-
-import main.java.org.sharktooth.gms.model.User;
 
 @Repository
 public interface UserDAO {

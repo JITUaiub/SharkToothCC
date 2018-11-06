@@ -1,13 +1,12 @@
-package main.java.org.sharktooth.gms.service.implementation;
+package org.sharktooth.gms.service.implementation;
 
 import java.util.List;
 
+import org.sharktooth.gms.dao.UsersQueryDAO;
+import org.sharktooth.gms.model.UsersQuery;
+import org.sharktooth.gms.service.UsersQueryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import main.java.org.sharktooth.gms.dao.UsersQueryDAO;
-import main.java.org.sharktooth.gms.model.UsersQuery;
-import main.java.org.sharktooth.gms.service.UsersQueryService;
 
 @Service()
 public class UsersQueryServiceImplementation implements UsersQueryService{

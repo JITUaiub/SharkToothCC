@@ -1,8 +1,8 @@
-package main.java.org.sharktooth.gms.service;
+package org.sharktooth.gms.service;
 
 import java.util.List;
 
-import main.java.org.sharktooth.gms.model.UsersQuery;
+import org.sharktooth.gms.model.UsersQuery;
 
 public interface UsersQueryService {
 	public abstract boolean saveUsersQuery(UsersQuery usersQuery);

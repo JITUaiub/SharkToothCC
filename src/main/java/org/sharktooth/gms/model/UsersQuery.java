@@ -1,4 +1,4 @@
-package main.java.org.sharktooth.gms.model;
+package org.sharktooth.gms.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

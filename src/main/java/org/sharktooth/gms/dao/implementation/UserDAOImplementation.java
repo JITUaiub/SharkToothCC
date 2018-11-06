@@ -1,15 +1,14 @@
-package main.java.org.sharktooth.gms.dao.implementation;
+package org.sharktooth.gms.dao.implementation;
 
 import java.util.List;
 
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
+import org.sharktooth.gms.dao.UserDAO;
+import org.sharktooth.gms.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
-
-import main.java.org.sharktooth.gms.dao.UserDAO;
-import main.java.org.sharktooth.gms.model.User;
 
 @Repository()
 public class UserDAOImplementation implements UserDAO {

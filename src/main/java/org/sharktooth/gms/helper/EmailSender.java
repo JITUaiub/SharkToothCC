@@ -1,4 +1,4 @@
-package main.java.org.sharktooth.gms.helper;
+package org.sharktooth.gms.helper;
 
 import java.util.Properties;
 

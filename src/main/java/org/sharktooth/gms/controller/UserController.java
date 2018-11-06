@@ -1,8 +1,11 @@
-package main.java.org.sharktooth.gms.controller;
+package org.sharktooth.gms.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import org.sharktooth.gms.helper.UserAccessControl;
+import org.sharktooth.gms.model.User;
+import org.sharktooth.gms.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,10 +14,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
-import main.java.org.sharktooth.gms.helper.UserAccessControl;
-import main.java.org.sharktooth.gms.model.User;
-import main.java.org.sharktooth.gms.service.UserService;
 
 @Controller
 @RequestMapping(value = "/user")
