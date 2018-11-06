@@ -7,7 +7,7 @@
 	</configSuffixes>
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
-		<config>src/main/java/org/sharktooth/gms/helper/Spring-Dispatcher-servlet.xml</config>
+		<config>src/main/java/org/sharktooth/gms/helper/Spring-Dispatcher-config.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

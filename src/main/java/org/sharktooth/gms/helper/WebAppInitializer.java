@@ -13,9 +13,9 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		XmlWebApplicationContext appContext = new XmlWebApplicationContext();
-		appContext.setConfigLocation("/WEB-INF/classes/org/sharktooth/gms/helper/Spring-Dispatcher-servlet.xml");
+		appContext.setConfigLocation("/WEB-INF/classes/org/sharktooth/gms/helper/Spring-Dispatcher-config.xml");
 
-		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("dispatcher",
+		ServletRegistration.Dynamic dispatcher = servletContext.addServlet("Spring-Dispatcher",
 				new DispatcherServlet(appContext));
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
