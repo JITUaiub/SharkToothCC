@@ -7,6 +7,7 @@ org\sharktooth\gms\dao\UsersQueryDAO.class
 org\sharktooth\gms\service\implementation\UsersQueryServiceImplementation.class
 org\sharktooth\gms\helper\EmailSender.class
 org\sharktooth\gms\service\UsersQueryService.class
+org\sharktooth\gms\ApplicationConfig\AppConfig.class
 org\sharktooth\gms\controller\AccountController.class
 org\sharktooth\gms\helper\EmailSender$1.class
 org\sharktooth\gms\controller\UserController.class
@@ -15,6 +16,7 @@ org\sharktooth\gms\dao\implementation\UserDAOImplementation.class
 org\sharktooth\gms\model\User.class
 org\sharktooth\gms\service\UserService.class
 org\sharktooth\gms\dao\implementation\UsersQueryDAOImplementation.class
+org\sharktooth\gms\ApplicationConfig\FrontController.class
 org\sharktooth\gms\service\implementation\GuildInfoServiceImplementation.class
 org\sharktooth\gms\model\UserLogin.class
 org\sharktooth\gms\service\implementation\UserServiceImplementation.class
