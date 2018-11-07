@@ -22,18 +22,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @EnableWebMvc
 @ComponentScan(basePackages = { "org.sharktooth.gms.controller", "org.sharktooth.gms.dao.implementation",
 		"org.sharktooth.gms.service.implementation" })
-@PropertySource("classpath:jdbc.properties")
 public class AppConfig extends WebMvcConfigurerAdapter {
-
-	// JDBC property Scan
-	@Value("${jdbc.driverClassName}")
-	private String driverClassName;
-	@Value("${jdbc.url}")
-	private String jdbcURL;
-	@Value("${jdbc.username}")
-	private String username;
-	@Value("${jdbc.password}")
-	private String password;
 
 	// JSP view resolver
 	@Bean
@@ -59,10 +48,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 	@Bean
 	public DataSource getDataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		dataSource.setDriverClassName(driverClassName);
-		dataSource.setPassword(password);
-		dataSource.setUrl(jdbcURL);
-		dataSource.setUsername(username);
+		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+		dataSource.setPassword("root");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/sharktoothdb");
+		dataSource.setUsername("root");
 		return dataSource;
 	}
 
@@ -87,10 +76,5 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 		reloadableResourceBundleMessageSource.setBasename("/WEB-INF/errorMessage");
 
 		return reloadableResourceBundleMessageSource;
-	}
-
-	@Bean
-	public static PropertySourcesPlaceholderConfigurer placeholderConfigurer() {
-		return new PropertySourcesPlaceholderConfigurer();
 	}
 }
