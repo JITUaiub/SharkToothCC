@@ -58,7 +58,7 @@
 		<property name="locations">
 			<array>
 				<value>
-					/WEB-INF/database.properties
+					/WEB-INF/jdbc.properties
 				</value>
 			</array>
 		</property>

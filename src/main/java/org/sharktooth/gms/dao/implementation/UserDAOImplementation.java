@@ -2,6 +2,8 @@ package org.sharktooth.gms.dao.implementation;
 
 import java.util.List;
 
+import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
 import org.hibernate.criterion.DetachedCriteria;
 import org.hibernate.criterion.Restrictions;
 import org.sharktooth.gms.dao.UserDAO;
@@ -14,49 +16,49 @@ import org.springframework.stereotype.Repository;
 public class UserDAOImplementation implements UserDAO {
 	
 	@Autowired
-	private HibernateTemplate hibernateTemplate;
-	
-	public HibernateTemplate getHibernateTemplate() {
-		return hibernateTemplate;
+	private SessionFactory sessionFactory;
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
 	}
 
-	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-		this.hibernateTemplate = hibernateTemplate;
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 
 	@Override
 	public boolean saveUser(User user) {
-		int id = (Integer) hibernateTemplate.save(user);
+		int id = (Integer) sessionFactory.openSession().save(user);
 		if (id > 0) {
 			return true;
 		}
 		return false;
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public User getUserDetailsByEmailAndPassword(String email, String password) {
-		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(User.class);
+		User user = null;
+		Criteria detachedCriteria = sessionFactory.openSession().createCriteria(User.class);
 		detachedCriteria.add(Restrictions.eq("email", email));
 		detachedCriteria.add(Restrictions.eq("password", password));
-		List<User> findByCriteria = (List<User>) hibernateTemplate.findByCriteria(detachedCriteria);
-		if (findByCriteria != null && findByCriteria.size() > 0) {
-			return findByCriteria.get(0);
-		}else {
-			return null;
+		List entityList = detachedCriteria.list();
+		
+		if (!entityList.isEmpty()) {
+			user = (User) entityList.get(0);
 		}
+		return user;
 	}
 
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<User> getUserList() {
-		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(User.class);
-		return (List<User>) hibernateTemplate.findByCriteria(detachedCriteria);
+		Criteria detachedCriteria = sessionFactory.openSession().createCriteria(User.class);
+		return detachedCriteria.list();
 	}
 
 	@Override
 	public void updateUser(User user) {
-		hibernateTemplate.save(user);
+		sessionFactory.openSession().save(user);
 	}
 
 }

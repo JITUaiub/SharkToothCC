@@ -2,30 +2,30 @@ package org.sharktooth.gms.dao.implementation;
 
 import java.util.List;
 
-import org.hibernate.criterion.DetachedCriteria;
+import org.hibernate.Criteria;
+import org.hibernate.SessionFactory;
 import org.sharktooth.gms.dao.UsersQueryDAO;
 import org.sharktooth.gms.model.UsersQuery;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate4.HibernateTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository()
 public class UsersQueryDAOImplementation implements UsersQueryDAO {
 	
 	@Autowired
-	private HibernateTemplate hibernateTemplate;
-	
-	public HibernateTemplate getHibernateTemplate() {
-		return hibernateTemplate;
+	private SessionFactory sessionFactory;
+
+	public SessionFactory getSessionFactory() {
+		return sessionFactory;
 	}
 
-	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
-		this.hibernateTemplate = hibernateTemplate;
+	public void setSessionFactory(SessionFactory sessionFactory) {
+		this.sessionFactory = sessionFactory;
 	}
 
 	@Override
 	public boolean saveUsersQuery(UsersQuery usersQuery) {
-		int id = (Integer) hibernateTemplate.save(usersQuery);
+		int id = (Integer) sessionFactory.openSession().save(usersQuery);
 		if (id > 0) {
 			return true;
 		}
@@ -35,14 +35,14 @@ public class UsersQueryDAOImplementation implements UsersQueryDAO {
 	@SuppressWarnings("unchecked")
 	@Override
 	public List<UsersQuery> getUsersQuery() {
-		DetachedCriteria detachedCriteria = DetachedCriteria.forClass(UsersQuery.class);
+		Criteria detachedCriteria = sessionFactory.openSession().createCriteria(UsersQuery.class);
 		
-		return (List<UsersQuery>) hibernateTemplate.findByCriteria(detachedCriteria);
+		return detachedCriteria.list();
 	}
 
 	@Override
 	public void updateUsersQuery(UsersQuery usersQuery) {
-		hibernateTemplate.update(usersQuery);
+		sessionFactory.openSession().update(usersQuery);
 	}
 
 }

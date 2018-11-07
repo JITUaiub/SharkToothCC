@@ -7,12 +7,13 @@ C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\dao\
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\helper\UserAccessControl.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\controller\AccountController.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\dao\UsersQueryDAO.java
-C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\helper\WebAppInitializer.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\model\User.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\service\UserService.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\service\UsersQueryService.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\service\implementation\GuildInfoServiceImplementation.java
+C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\ApplicationConfig\FrontController.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\service\GuildInfoService.java
+C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\ApplicationConfig\AppConfig.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\dao\implementation\UserDAOImplementation.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\model\UserLogin.java
 C:\Users\JITU-PC\git\JITUaiub\SharkToothCC\src\main\java\org\sharktooth\gms\helper\SocialHelper.java
